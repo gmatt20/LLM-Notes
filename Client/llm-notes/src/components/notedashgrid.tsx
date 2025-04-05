@@ -1,4 +1,4 @@
-import NoteDash from "@/components/notedash";
+import NoteDash from "@/components/NoteDash";
 
 export default function NoteDashGrid() {
   return (

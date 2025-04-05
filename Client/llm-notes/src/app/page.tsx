@@ -1,4 +1,4 @@
-import NoteDashGrid from "@/components/notedashgrid";
+import NoteDashGrid from "@/components/NoteDashGrid";
 
 export default function Home() {
   return (
