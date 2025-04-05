@@ -1,4 +1,4 @@
-export default function NoteDash(){
+export default function NoteDash() {
   return (
     <div className="bg-[#282828] p-5 rounded-2xl">
       <div>
