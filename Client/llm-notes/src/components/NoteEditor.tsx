@@ -9,7 +9,8 @@ export default function NoteEditor() {
     content: "<p>My first note...</p>",
     editorProps: {
       attributes: {
-        class: "border-2 border-[#575757] w-[80%] focus:outline-none ",
+        class:
+          "border-2 border-[#575757] w-[80%] focus:outline-none prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 p-10 dark:prose-invert rounded-lg",
       },
     },
   });
