@@ -4,9 +4,21 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
 export default function NoteEditor() {
+  const storedContent =
+    typeof window !== "undefined" && localStorage.getItem("note-content");
+
   const editor = useEditor({
     extensions: [StarterKit],
-    content: "<p>My first note...</p>",
+    content: storedContent
+      ? JSON.parse(storedContent)
+      : {
+          type: "doc",
+          content: [],
+        },
+    onUpdate: ({ editor }) => {
+      const json = editor.getJSON();
+      localStorage.setItem("note-content", JSON.stringify(json));
+    },
     editorProps: {
       attributes: {
         class:
