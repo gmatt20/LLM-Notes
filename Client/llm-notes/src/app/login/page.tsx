@@ -13,7 +13,9 @@ export default async function SignIn() {
           "use server";
           await signOut();
         }}>
-        <button className="cursor-pointer p-2 border-2 bg-blue-400 text-black" type="submit">
+        <button
+          className="cursor-pointer p-2 border-2 bg-blue-400 text-black"
+          type="submit">
           Sign Out
         </button>
       </form>
@@ -22,9 +24,11 @@ export default async function SignIn() {
     <form
       action={async () => {
         "use server";
-        await signIn("google");
+        await signIn("google", { redirectTo: "/secret" });
       }}>
-      <button className="cursor-pointer p-2 border-2 bg-blue-400 text-black" type="submit">
+      <button
+        className="cursor-pointer p-2 border-2 bg-blue-400 text-black"
+        type="submit">
         Signin with Google
       </button>
     </form>
