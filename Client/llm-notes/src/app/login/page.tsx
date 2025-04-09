@@ -1,4 +1,5 @@
 import { auth, signIn, signOut } from "@/auth";
+import { LoginForm } from "@/components/login-form";
 
 export default async function SignIn() {
   const session = await auth();
@@ -21,17 +22,20 @@ export default async function SignIn() {
     </div>
   ) : (
     <div className="w-screen h-screen flex justify-center items-center flex-col">
-      <form
-        action={async () => {
-          "use server";
-          await signIn("google", { redirectTo: "/secret" });
-        }}>
-        <button
-          className="cursor-pointer p-2 border-2 bg-blue-400 text-black"
-          type="submit">
-          Signin with Google
-        </button>
-      </form>
+      <LoginForm />
     </div>
+    // <div className="w-screen h-screen flex justify-center items-center flex-col">
+    //   <form
+    //     action={async () => {
+    //       "use server";
+    //       await signIn("google", { redirectTo: "/secret" });
+    //     }}>
+    //     <button
+    //       className="cursor-pointer p-2 border-2 bg-blue-400 text-black"
+    //       type="submit">
+    //       Signin with Google
+    //     </button>
+    //   </form>
+    // </div>
   );
 }
