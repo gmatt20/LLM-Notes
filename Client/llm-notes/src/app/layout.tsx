@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
+import NavEditor from "@/components/NavEditor";
 import { usePathname } from "next/navigation";
 import "./globals.css";
 
@@ -35,7 +36,7 @@ export default function RootLayout({
         {pathname === "/" ? (
           <Nav />
         ) : pathname === "/note-editor" ? (
-          <Nav />
+          <NavEditor />
         ) : pathname == "/dashboard" ? (
           <Nav />
         ) : (
