@@ -36,7 +36,7 @@ export default function RootLayout({
           <Nav />
         ) : pathname === "/note-editor" ? (
           <Nav />
-        ) : pathname == "/secret" ? (
+        ) : pathname == "/dashboard" ? (
           <Nav />
         ) : (
           <></>

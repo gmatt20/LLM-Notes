@@ -28,7 +28,7 @@ export async function LoginForm({
           <form
             action={async () => {
               "use server";
-              await signIn("google", { redirectTo: "/secret" });
+              await signIn("google", { redirectTo: "/dashboard" });
             }}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-3">
