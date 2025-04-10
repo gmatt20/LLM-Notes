@@ -10,7 +10,7 @@ export default function Nav() {
     redirect("/");
   };
   const redirectAccount = () => {
-    redirect("/account");
+    redirect("/auth");
   };
 
   return (
